@@ -63,10 +63,31 @@ body{
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 470px) {
+  .title {
+    height: 15rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1rem 2rem;
+    top: 10rem;
+  }
+
+  .content h3 {
+    font-size: .77rem;
+  }
+
+  .content h2 {
+    font-size: 1rem;
+  }
+}
+
 /** Links **/
 
 
-nav .container{
+nav .container,
+nav .mobile-nav{
   background-color: firebrick;
   color: white;
 }
@@ -125,6 +146,57 @@ nav .container ul{
   text-align: center;
   padding: 0.5rem;
 }
+
+.mobile-nav li{
+  display: none;
+}
+
+@media only screen and (max-width: 1024px){
+  .pen,
+  .watch{
+    width: 47%;
+  }
+
+  nav .container{
+  display: none;
+}
+
+  .business{
+    width: 35%;
+  }
+
+  .mobile-nav{
+    display: block;
+    text-align: center;
+  }
+
+  .glasses{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .images,
+  .infoitems {
+    flex-wrap: wrap;
+  }
+
+  .pen {
+    width: 90%;
+    margin: auto;
+  }
+
+  .watch,
+  .glasses {
+    display: none;
+  }
+
+  .infoitems {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+}
+
 /** Info **/
 .info{
   max-width: 960px;
@@ -162,4 +234,10 @@ nav .container ul{
 .copyright{
   max-width: 960px;
   margin: 0px auto;
+}
+
+@media only screen and (max-width: 470px) {
+  footer {
+    text-align: center;
+  }
 }
